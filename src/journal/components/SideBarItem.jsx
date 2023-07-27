@@ -5,11 +5,12 @@ import { TurnedInNot } from "@mui/icons-material"
 import { Grid, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
 import { setActiveNote } from "../../store/journal/journalSlice"
 
-export const SideBarItem = ({ title,body,id,date,imageUrls =[] }) => {
+export const SideBarItem = ({ title,body,id,date,imageUrls =[] ,handleDrawerToggle}) => {
     const dispatch = useDispatch();
     
     
     const onClickNote =()=>{        
+        handleDrawerToggle();
         dispatch( setActiveNote({ title,body,id,date,imageUrls}) );
     }
     const newTitle = useMemo(() =>{
@@ -21,7 +22,7 @@ export const SideBarItem = ({ title,body,id,date,imageUrls =[] }) => {
     return (
         <ListItem  disablePadding>
             <ListItemButton
-                onClick={onClickNote}
+                onClick={onClickNote }
             >
                 <ListItemIcon>
                     <TurnedInNot />
