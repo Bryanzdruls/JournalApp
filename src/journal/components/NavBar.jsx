@@ -57,3 +57,4 @@ export const NavBar = ({drawerWidth = 240, openSideBar }) => {
     </AppBar>
   )
 }
+export default NavBar;

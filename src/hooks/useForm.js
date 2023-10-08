@@ -20,6 +20,7 @@ export const useForm = ( initialForm = {}, formValidations= {} ) => {
         }
         return true;
     },[ formValidation ]);
+    
     const onInputChange = ({ target }) => {
         const { name, value } = target;
         setFormState({

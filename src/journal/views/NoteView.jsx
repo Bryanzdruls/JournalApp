@@ -17,7 +17,7 @@ export const NoteView = () => {
     const {active: note, messageSaved, isSaving} = useSelector(state => state.journal);
     
     const {body,title,date,onInputChange,formState} = useForm(note);
-  
+    
     const dateString = useMemo(()=>{
         const newDate = new Date( date );
         return newDate.toUTCString();
