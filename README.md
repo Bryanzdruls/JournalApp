@@ -1,8 +1,23 @@
-# React + Vite
+# Journal App
+Esta aplicacion es un diario con registro en el que cada usuario que se haya registrado puede almacenar sus notas.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Se divide en **2 rutas principales**, la pagina de autenticacion donde se puede ingresar por medio del login o registrarse segun sea el caso. Y la pagina principal de las notas donde se pueden **crear notas, editar y eliminar**. 
 
-Currently, two official plugins are available:
+La aplicacion va un poco mas alla en la parte del login permitiendo al usuario registrarse con la **cuenta de google** todo por medio de la utilizacion de **firebase**. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Constantemente y gracias al patron **redux** la aplicacion esta checkeando el estado de autenticacion del usuario verificando que siempre su sesion **siempre tenga validez**.
+
+La aplicacion contiene un servicio de base de datos en tiempo real llamado Firebase proveido por google.
+
+
+# Como iniciar la app
+Lo primero que debemos hacer es iniciar el comando:
+`npm install` Esto para instalar todos los modulos de node incluidos en el package.json.
+
+Para correr la aplicacion se requiere correr el comando `npm run dev`. Luego de esto tendras todo listo para probar la aplicacion.
+
+# Tecnologias utilizadas
+1. **React**
+2. **Redux**
+3. **Firebase**
+4. **Mui**
